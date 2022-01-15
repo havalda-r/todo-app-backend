@@ -1,4 +1,4 @@
-package com.rich.rest.webservices.restfulwebservices.basic.auth;
+package com.rich.rest.basic.auth;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package com.rich.rest.webservices.restfulwebservices.basic.auth;
+package com.rich.rest.basic.auth;
 
 public class AuthenticationBean {
     private String message;
