@@ -1,15 +1,15 @@
 package com.rich.rest.webservices.restfulwebservices.todo;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.Objects;
 
 @Entity
+@Table
 public class Todo {
     @Id
-    @GeneratedValue
+    @SequenceGenerator(name="todo_sequence",sequenceName = "todo_sequence",allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "todo_sequence")
     private Long id;
     private String username;
     private String description;
@@ -78,5 +78,16 @@ public class Todo {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    @Override
+    public String toString() {
+        return "Todo{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", description='" + description + '\'' +
+                ", targetDate=" + targetDate +
+                ", isDone=" + isDone +
+                '}';
     }
 }
